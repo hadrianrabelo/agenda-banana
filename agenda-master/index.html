@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="widht-device-width, initial-scale=1">
-        <title>Agenda de bananas</title>
-            <link href="css/bootstrap.css" rel="stylesheet">
-        <style>
-            body {
-                background: url('img/dark-blue-background.jpg')
-                no-repeat center center fixed;
-                background-size: cover;
-            }
-        </style>
-    </head>
-    <body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht-device-width, initial-scale=1">
+    <title>Agenda de bananas</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: url('img/dark-blue-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            overflow-x:hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row h-100 align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-sm"> </div>
-                <div class="col-sm-6"> 
+                <div class="col-sm-6">
                     <div class="card">
                         <div class="card-header bg-white">
                             <img style="width: 100%" src="img/logo.jpg" alt="Agenda de contatos">
                         </div>
                         <div class="card-body">
-                            <form>
-
+                            <form id="login" method="post" action="login.php">
+                                <div class="form-group">
+                                    <label for="mailUsuario">E-mail</label>
+                                    <input type="email" class="form-control" id="mailUsuario"
+                                        placeholder="Digite seu e-mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="senhaUsuario">E-mail</label>
+                                    <input type="password" class="form-control" id="senhaUsuario"
+                                        placeholder="Digite sua senha" required>
+                                </div>
+                                <button id="entrarLogin" type="submit" class="btn btn-primary
+                                    btn-block btn-lg">Entrar</button>
                             </form>
                         </div>
                         <div class="card-footer">
@@ -39,9 +59,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm"> </div>   
-                </div> 
+                <div class="col-sm"> </div>
             </div>
-       </div>     
-    </body>
+        </div>
+    </div>
+
+    </div>
+</body>
+
 </html>
