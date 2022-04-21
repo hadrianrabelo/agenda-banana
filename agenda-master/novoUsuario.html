@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht-device-width, initial-scale=1">
+    <title>Agenda de bananas</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    
+    <style>
+        html {
+            height: 100%;
+        }
+
+        body {
+            background: url('img/dark-blue-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            overflow-x:hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row h-100 align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm"> </div>
+                <div class="col-sm-10">
+                    <div class="card border-primary">
+                        <div class="card-header bg-primary text-white">
+                            <h5>Cadastro de novo usuário</h5>
+                        </div>
+
+                        <div class="card-body">
+                            <form id="novoUsuario" method="post" action="novoUsuario.html">
+                                <div class="row">
+                                    <div class="col-sm"> 
+                                        <div class="form-group">
+                                            <label for="nomeUsuario">Nome </label>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text"><i class="bi-people-fill"></i></div>
+                                                </div>
+                                                <input id="nomeUsuario" type="text" class="form-control"
+                                                name="nomeUsuario" placeholder="Digite seu nome" value="" required>
+                                            </div>
+                                        </div>     
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">          </div>
+                                    <div class="col-sm">          </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm">          </div>
+                                    <div class="col-sm">          </div>
+                                </div>
+                            </form>
+                                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm"> </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
