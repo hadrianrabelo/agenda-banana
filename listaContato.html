@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <style>
+
+        html,body {
+
+            height: 100%;
+            overflow-x: hidden;
+
+        }
+
+         .custom-file-input ~ .custom-file-label::after{
+
+            content: "Selecionar";
+
+        }
+    </style>
+</head>
+<body>
+
+
+    
+    
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+
+                <a class="navbar-brand" href="#">
+
+                    <img src="img/lupa.png" width="30" height="30" alt="Agenda de Contatos">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar">
+
+                    <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item dropdown">
+                            
+                            
+                                
+                                <a class="nav-link dropdown-toggle" href="#" role="button" id="menuCadastros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cadastros
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="menuCadastros">
+
+                                    <a class="dropdown-item" href="cadastroContato.html">  
+                                    
+                                      <i class="bi-person-fill"></i>Novo Contato
+
+
+                                    </a>
+
+                                    
+
+                                    <a class="dropdown-item" href="listaContato.html"> 
+                                      
+                                      <i class="bi-list-ul"></i>Lista Contatos
+
+                                    </a>
+
+
+
+
+                                </div>
+
+
+                        
+                            </li>
+
+
+
+                            <li class="nav-item dropdown">
+                             
+                                
+                              <a class="nav-link dropdown-toggle" href="#" role="button" id="menuConta" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Minha Conta
+                              </a>
+
+                              <div class="dropdown-menu" aria-labelledby="menuConta">
+
+                                  <a class="dropdown-item" href="alterarDados.html">  
+                                  
+                                    <i class="bi-pencil-square"></i>Alterar os Dados
+
+
+                                  </a>
+
+                                  
+
+                                  <a class="dropdown-item" href="logout.php"> 
+                                    
+                                    <i class="bi-door-open-fill"></i>Sair
+
+                                  </a>
+
+
+
+
+                              </div>
+
+
+                      
+                          </li>
+
+
+                        <li class="nav-item">
+                             
+                                
+                            <a class="nav-link" href="#"  data-toggle="modal" data-target="#modalSobreAplicacao">
+                                Sobre
+                            </a>
+
+
+                    
+                        </li>
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0" method="get" action="listaContatos.html">
+
+                        <input class="form-control mr-sm-2" type="text" type="search" name="busca" placeholder="Pesquisar">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                                Pesquisar
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </nav>
+
+
+        <div  class="h-100 row align-items-center pt-5">
+            <div class="container">
+           
+           
+                <div class="row">
+        
+                    <div class="col-sm"></div>
+                   
+                    <div class="col-sm-12">
+        
+                        <div class="card border-primary my-5">
+        
+        
+                            <div class="header bg-primary text-white">
+    
+                                <h5>Lista de Contatos</h5>
+                
+    
+                
+                            </div>
+                
+                            <div class="card-body">
+
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Nome</th>
+                                            <th scope="col">Telefone</th>
+                                            <th scope="col">E-mail</th>
+                                            <th scope="col"></th>
+
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">{id}</th>
+                                            <td>{nome}</td>
+                                            <td>{telefone}</td>
+                                            <td>{email}</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <a class="btn btn-secondary dropdown-toggle btn-sm" href="#" role="button" id="{id}" data-toggle="dropdown"
+                                                        aria-haspopup="true" aria-expanded="false">
+                                                        Ações
+                                                    </a>
+                                                
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#visualizarContato" data-whatever="{id}">
+                                                            <i class="bi-eye"></i>Visualizar
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                           <i class="bi-pencil"></i> Editar
+                                                        </a>
+                                                        <a class="dropdown-item" href="#">
+                                                          <i class="bi-trash"></i>  Excluir
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+    
+                                
+    
+    
+                                
+                
+                            </div>
+                
+                            <div class="card-footer">
+    
+                            </div>
+                
+                        </div>
+        
+                    </div>
+        
+                    <div class="col-sm"></div>
+        
+                </div>
+        
+               
+        
+               
+               
+        
+            </div>
+    
+        </div>
+
+        <div class="modal fade" id="modalSobreAplicacao" tabindex="-1" role="dialog" aria-labelledby="sobreAplicacao" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="sobreAplicacao">Sobre</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/logo.png">
+                  <hr>
+                  <p>Agenda de Contatos</p>
+                  <p>Versão 1.0</p>
+                  <p>Todos os direitos resevados &copy; 2022 </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+
+
+        <div class="modal fade" id="visualizarContato" tabindex="-1" role="dialog" aria-labelledby="visualizarDadosContato" aria-hidden="true">
+
+            <div class="modal-dialog" role="document">
+
+                <div class="model-content">
+
+                        <div class="modal-header">
+
+                            <h5 class="modal-title" id="visualizarDadosContato">Dados do Contato</h5>
+
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                        </div>
+                        <div class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Fechar</button>
+
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+          
+    
+
+
+
+
+</body>
+</html>
